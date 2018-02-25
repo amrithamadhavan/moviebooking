@@ -1,10 +1,17 @@
 {
   "name": "moviebook",
   "version": "1.0.0",
+<<<<<<< HEAD
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
+=======
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> d8edf3d84c5325a77a3c5d1d8e32aadc9aaa4e60
   },
   "author": "",
   "license": "ISC",
@@ -13,9 +20,16 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "jsonwebtoken": "^8.1.1",
+<<<<<<< HEAD
     "mongoose": "^5.0.7",
     "morgan": "^1.9.0",
     "nodemon": "^1.15.1"
   },
   "description": ""
+=======
+    "mongoose": "^5.0.5",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.14.12"
+  }
+>>>>>>> d8edf3d84c5325a77a3c5d1d8e32aadc9aaa4e60
 }

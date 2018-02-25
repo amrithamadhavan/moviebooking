@@ -36,5 +36,9 @@ app.listen(config.port,function(err){
 	if(err)
 	console.log(err);
     else
+<<<<<<< HEAD
 	console.log("listening on port 3080");
+=======
+	console.log("listening on port 3000");
+>>>>>>> d8edf3d84c5325a77a3c5d1d8e32aadc9aaa4e60
 });
