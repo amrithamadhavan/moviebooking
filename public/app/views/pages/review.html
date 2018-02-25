@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div>
+        <a style="margin-top:20px"  class="btn btn-primary" href="/">Back</a>
+    </div>
+ <h1>{{movie.movie.name}}</h1>
+    <div class="row">
+        <div class="col-md-4">
+        	<div class="thumbnail">
+            <img style="width:100%" src="app/resources/images/{{movie.movie.name}}.jpg">
+        </div>
+    </div>
+        <div class="col-md-6">
+            <h3>Review</h3>
+            {{movie.movie.review}}<br/>
+            <h3>Cast:</h3>
+            {{movie.movie.cast}}<br/>
+            <h3>Director</h3>
+            {{movie.movie.director}}<br/>
+            <h3>Available Seats</h3>
+            {{movie.movie.availability}}<br/>
+           <!-- <h3>Available Seats</h3>
+            {{movie.movie.seats['1a']}}<br/>-->
+             <a style="margin-top:20px;" class="btn btn-primary" href="/seat/{{movie.movie.name}}">Book</a>
+        </div>
+    </div>
+</div>

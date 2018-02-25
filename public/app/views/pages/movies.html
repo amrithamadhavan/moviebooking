@@ -1,0 +1,104 @@
+
+ <head>
+<style>
+body{
+
+  background-color: black;
+}
+</style>
+
+ </head>
+  
+<body >
+
+  <div controller="MainController as main">
+<div class="container" ng-if="main.loggedIn">
+
+
+  <div class="row" style="margin-top: 50px">
+       <div ng-repeat="each in movie.movies" >
+        
+
+    <div class="col-md-4">
+      <div class="thumbnail">
+          <!--<h2>Movie Name   {{each.name}}</h2>-->
+          <a href="/movie/{{each.name}}" target="_blank">
+          <img  src="app/resources/images/{{each.name}}.jpg" alt="Lights" style="width:100%;"></a></div>
+          <div style="margin-top: 20px;margin-left:120px"><a class="btn btn-primary" href="/movie/{{each.name}}">Review</a>
+          <a class="btn btn-primary" href="/seat/{{each.name}}">Book</a>
+
+</div>
+       
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+ <div class="row">
+        <div class="col-xs-3">
+            <h3  style="color:white;">Tickets available for:</h3>
+        </div>
+        <div class="col-xs-3">
+            <input class="form-control" style="margin-top:20px" type="text" placeholder="Search a movie" data-ng-model="search">
+        </div>
+    </div>
+    <br/>
+    <ul>
+      <h3>
+        <li style="color:white;" data-ng-repeat="each in movie.movies | orderBy:'name':true | filter:search">
+           {{each.name | uppercase}} - {{each.rating}} - {{each.availability}}<br/><br/>
+        </li>
+      </h3>
+    </ul>
+
+
+
+
+
+
+<!--<div class="container">
+  <h2>Movies Screening..!</h2>
+  <!--<p>The .thumbnail class can be used to display an image gallery.</p>
+  <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
+  <p>Click on the images to enlarge them.</p>
+
+  
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="app/resources/images/kalakalapu.jpg" target="_blank">
+          <img  src="app/resources/images/kalakalapu.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>casting jayam ravi</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="app/resources/images/sketch.jpg" target="_blank">
+          <img  src="app/resources/images/sketch.jpg" alt="Nature" style="width:100%">
+          <div class="caption">
+            <p>casting mirchi shiva,jeeva</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="app/resources/images/orunallanalpaathu.jpg" target="_blank">
+          <img src="app/resources/images/orunallanalpaathu.jpg" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>casting vikram and tamannah.!</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+</body>
+
